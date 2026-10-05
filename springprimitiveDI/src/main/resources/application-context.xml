@@ -6,6 +6,18 @@
        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 
-	<bean ></bean>
+	
+	
+	<bean id="openaccount" class="com.kk.springprimitiveDI.beans.OpenSavingAccount">
+	
+	</bean>
+	
+	<bean id="customer"
+		class="com.kk.springprimitiveDI.beans.Customer">
+		<property name="name" value="Laxman" />
+		<!-- <property name="dob" value="01/01/2002" /> -->
+		<property name="kyc" value="Laxman" />
+		<property name="phone" value="1831564021" />
+	</bean>
 
 </beans>
