@@ -1,0 +1,47 @@
+package com.kk.beans;
+
+public class Vehicle {
+
+	private String brand;
+    private String model;
+    private String country;
+    private String fuelType;
+    private int year;
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String model) {
+		this.model = model;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public String getFuelType() {
+		return fuelType;
+	}
+	public void setFuelType(String fuelType) {
+		this.fuelType = fuelType;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	@Override
+	public String toString() {
+		return "Vehicle [brand=" + brand + ", model=" + model + ", country=" + country + ", fuelType=" + fuelType
+				+ ", year=" + year + "]";
+	}
+    
+    
+}

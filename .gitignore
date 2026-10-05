@@ -1,0 +1,28 @@
+# Eclipse workspace
+.metadata/
+
+# Eclipse project files
+.settings/
+.classpath
+.project
+
+# Java compiled files
+*.class
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+build/
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

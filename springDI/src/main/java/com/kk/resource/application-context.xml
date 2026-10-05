@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+
+	    <bean id="peugeot" class="com.kk.beans.Vehicle">
+        <property name="brand" value="Peugeot"/>
+        <property name="model" value="308"/>
+        <property name="country" value="France"/>
+        <property name="fuelType" value="Diesel"/>
+        <property name="year" value="2025"/>
+    </bean>
+
+    <bean id="citroen" class="com.kk.beans.Vehicle">
+        <property name="brand" value="Citroën"/>
+        <property name="model" value="C3"/>
+        <property name="country" value="France"/>
+        <property name="fuelType" value="Petrol"/>
+        <property name="year" value="2025"/>
+    </bean>
+
+    <bean id="toyota" class="com.kk.beans.Vehicle">
+        <property name="brand" value="Toyota"/>
+        <property name="model" value="Corolla"/>
+        <property name="country" value="Japan"/>
+        <property name="fuelType" value="Hybrid"/>
+        <property name="year" value="2025"/>
+    </bean>
+
+</beans>       
