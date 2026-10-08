@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/util
+       http://springframework.org">
+
+
+ 	<bean id="cust" class="com.kk.beanalias.beans.Customer">
+		<property name="name" value="Ram" />
+		<property name="age" value="46" />
+	</bean>
+
+	<alias name="cust" alias="c1"/> 
+	
+	
+	<!-- <bean id="list" class="java.util.Arraylist">
+	    <list value-type="java.lang.String"> Ram</list>
+	
+	</bean> -->
+	  <bean id="list" class="java.util.ArrayList">
+        <constructor-arg>
+            <list value-type="java.lang.String">
+                <value>Ram</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+	<bean>
+	</bean>
+
+</beans>

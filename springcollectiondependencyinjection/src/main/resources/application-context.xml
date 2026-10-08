@@ -1,0 +1,88 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+
+
+
+	<bean id="tnbcollege"
+		class="com.kk.springcollectiondependencyinjection.beans.College">
+
+		<property name="hodtoCourse">
+			<map key-type="java.lang.String"
+				value-type="com.kk.springcollectiondependencyinjection.beans">
+				<entry key="Dhananjay">
+					<ref bean="courseTopper" />
+				</entry>
+			</map>
+
+		</property>
+
+		<property name="courseTopper">
+			<props>
+				<prop key="CSE"> Ramesh </prop>
+			</props>
+		</property>
+
+	</bean>
+
+	<bean id="cse1sem"
+		class="com.kk.springcollectiondependencyinjection.beans.Course">
+		<property name="subject" >
+			<list value-type="java.lang.String">
+				<value>C</value>
+				<value>DS</value>
+				<value>DBMS</value>
+			</list>
+		</property>
+
+		<constructor-arg>
+			<set value-type="java.lang.String">
+				<value>Ram</value>
+				<value>Sita</value>
+				<value>Laxman</value>
+			</set>
+		</constructor-arg>
+	</bean>
+	
+	<!-- List Collection-->
+	
+	<bean id="company" class="com.kk.springcollectiondependencyinjection.beans.Company">
+	
+		<property name="laptopbrand" ref="laptopbrandcollections"/>
+		<property name="listofprocessormodel" ref="listofprocessormodelcollection" />
+	
+	</bean>
+	
+	
+	 <util:list id="laptopbrandcollections"
+               list-class="java.util.ArrayList"
+               value-type="java.lang.String">
+        <value>HP</value>
+        <value>Dell</value>
+        <value>Sony</value>
+    </util:list>
+    
+    <util:list id="listofprocessormodelcollection"
+               list-class="java.util.Vector"
+               value-type="java.lang.String">
+        <value>Core-3</value>
+        <value>Core-5</value>
+        <value>Core-7</value>
+        <value>Core Ultra-7</value>
+    </util:list>
+	
+	
+	
+	
+	
+	
+	
+	
+
+</beans>
